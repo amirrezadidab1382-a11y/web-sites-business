@@ -1693,14 +1693,14 @@ button {
     }
 }
 
-
+/* 
 @media (max-width: 560px) {
 
     .container {
 
         width:
             calc(100% - 28px);
-    }
+    } */
 
 
     .site-header {
@@ -1764,10 +1764,14 @@ button {
     }
 
 
-    .hero-visual {
-
-        min-height: 300px;
-    }
+/* .hero-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; 
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto;
+}  */
 
 
     .preview-body {
