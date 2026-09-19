@@ -1,0 +1,28 @@
+                 DARK MODE
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+         CSS                   JS
+          │                     │
+    CSS Variables            Button
+          │                     │
+       :root                click event
+          │                     │
+  [data-theme="dark"]       toggle
+          │                     │
+      var(--bg)             setAttribute
+          │                     │
+          └──────────┬──────────┘
+                     │
+                HTML DOM
+                     │
+             data-theme="dark"
+                     │
+                     ↓
+               Dark Theme
+                     │
+                     ↓
+                localStorage
+                     │
+                     ↓
+             حفظ انتخاب کاربر

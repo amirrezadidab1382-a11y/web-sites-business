@@ -7,8 +7,8 @@
     --surface-soft: #fafafa;
 
     --text: #15161a;
-    --text-secondary: #686b75;
-    --text-muted: #999ca5;
+    --text-secondary: black;
+    --text-muted: #000000;
 
     --border: #1d1d1e;
 
@@ -39,8 +39,8 @@
     --surface: #191a1e;
     --surface-soft: #151619;
 
-    --text: #9494a1;
-    --text-secondary: #a4a6af;
+    --text: #e0e0e7;
+    --text-secondary: #e4e4ef;
     --text-muted: #73757d;
 
     --border: #292b30;
@@ -67,7 +67,7 @@ html {
 
 
 body {
-    font-family: "Vazirmatn", sans-serif;
+    font-family: "Vazirmatn";
 
     background: var(--bg);
     color: var(--text);
@@ -1318,8 +1318,7 @@ button {
 
 .contact-section {
 
-    padding:
-        100px 0;
+    padding-right:100px 0;
 
     background: var(--surface);
 
@@ -1329,12 +1328,9 @@ button {
 
 
 .contact-container {
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 50px;
 }
 
@@ -1346,12 +1342,13 @@ button {
 
 .contact-button {
 
-    min-width: 330px;
-    min-height: 75px;
+    width: 330px;
+    height: 75px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right:20px ;
 
     padding: 0 18px 0 24px;
 
@@ -1693,14 +1690,14 @@ button {
     }
 }
 
-/* 
+
 @media (max-width: 560px) {
 
     .container {
 
         width:
             calc(100% - 28px);
-    } */
+    }
 
 
     .site-header {
@@ -1764,14 +1761,10 @@ button {
     }
 
 
-/* .hero-visual {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 25px; 
-    width: 100%;
-    max-width: 900px; 
-    margin: 0 auto;
-}  */
+    .hero-visual {
+
+        min-height: 300px;
+    }
 
 
     .preview-body {
@@ -1883,5 +1876,55 @@ button {
             auto !important;
     }
 }
+.customer{
+    text-align: center;
+    align-items: center;
+}
+.p_inf{
+    text-align: center;
+}
+/* .p_for_customers{
+    font-size: 30px;
+    text-align: center;
+} */
+.f{
+    width: 300px;
+    height: 75px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 
+    padding: 0 18px 0 24px;
+
+    background: var(--bg);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform .35s var(--transition);
+} 
+.container1{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.f{
+    box-sizing: border-box;
+
+}
+.mobile-nav.open {
+    display: flex;
+}
+.mobile-nav {
+    display: none;
+}

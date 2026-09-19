@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <link rel="icon" href="site_logo.jpg">
+    <!-- <link rel="stylesheet" href="q.css"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <style>
+        :root {
+    --bg: #e9e9f7;
+    --surface: #fff8f8;
+    --surface-soft: #fafafa;
+
+    --text: #15161a;
+    --text-secondary: black;
+    --text-muted: #000000;
+
+    --border: #1d1d1e;
+
+    --primary: #7057ff;
+    --primary-dark: #5942dc;
+
+    --blue: #438cff;
+    --orange: #f59b45;
+    --green: #32b982;
+
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 25px;
+
+    --container: 1200px;
+
+    --shadow:
+        0 12px 35px rgba(20, 20, 30, .06);
+
+    --transition:
+        cubic-bezier(.2, .8, .2, 1);
+}
+        [data-theme="dark"] {
+
+    --bg: #111214;
+    --surface: #191a1e;
+    --surface-soft: #151619;
+
+    --text: #e0e0e7;
+    --text-secondary: #e4e4ef;
+    --text-muted: #73757d;
+
+    --border: #292b30;
+
+    --shadow:
+        0 15px 40px rgba(0, 0, 0, .25);
+}
+        body{
+            font-family:"Vazirmatn";;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            min-height: 50vh;
+            /* margin: 0; */
+            background-color: var(--bg);
+        }
+        .Login-form{
+            background-color: var(--surface);
+            padding: 20px;
+            border-radius: 13px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.253);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        .Login-form{
+            color: var(--text);
+            margin-bottom: 15px;     
+        }
+        .Login-form input{
+            width: 95%;
+            padding:6px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(207,205,205);
+            border-radius: 9px;
+        }
+        .buttons{
+            margin-top: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .Login-form button{
+            width: 48%;
+            border-radius: 9px;
+            border: none;
+            padding: 9px;
+
+        }
+        .Login-Btn {
+            background-color: #7057ff;
+            color: black;
+            transition: ease 0.2s;
+        }
+        .Login-Btn:hover{
+            background-color: #7057ff;
+        }
+        .Sign-Btn{
+            transition: ease 0.2s;
+        }
+        .Sign-Btn:hover{
+            background-color: #d4d3dd;
+        }
+        a{
+            text-decoration: none;
+            font-size: 13px;
+            color: black;
+            margin-left: 288px;
+        }
+        
+      .desktop-nav{
+    text-decoration: none;
+}
+.header-actions {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.header-button {
+
+    padding: 9px 14px;
+
+    border-radius: 9px;
+
+    background: var(--text);
+    color: var(--bg);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.header-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.theme-button {
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    transition: all 25.s ease;
+}
+
+
+.theme-button:hover {
+    background: var(--bg);
+    color: var(--primary);
+}
+
+
+.sun-icon,
+.moon-icon {
+    font-size: 16px;
+}
+
+
+.moon-icon {
+    display: none;
+}
+
+
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+
+[data-theme="dark"] .moon-icon {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+
+                <nav class="desktop-nav">
+
+                <a
+                    href="index.html"
+                    class="nav-link active"
+                >
+                    برگرد←
+                </a>
+                 <div class="header-actions">
+
+                <button
+                    class="theme-button"
+                    id="themeToggle"
+                    aria-label="تغییر حالت نمایش"
+                    type="button"
+                >
+                    <span class="sun-icon">☀</span>
+                    <span class="moon-icon">☾</span>
+                </button>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+<form class="Login-form" id="signupForm">
+    <h2>ثبت نام</h2>
+<label for="username">
+    نام کاربری
+</label>
+    <input
+    type="text"
+    id="username"
+    placeholder="نام کاربری: "
+    required
+>
+<label for="password">
+    رمز بور
+</label>
+    <input
+    type="password"                                        
+    id="password"
+    placeholder="رمز عبور: "
+    required
+>
+<p id="message"></p>
+<div class="buttons">
+
+    <button
+    type="submit"
+    class="Login-Btn"
+>ثبت نام</button>
+</div>
+</form>
+
+<div class="Login-form" id="profile">
+    <h2>پروفایل من</h2>
+
+    <p>
+        پنل کاربری
+    </p>
+    اطلاعات شما: 
+        <span id="profileUsername"></span>
+        <span id="profilepassword"></span>
+        <button class="Login-Btn" id="log-out">خروج</button>
+</div>
+
+<div>
+
+</div>
+<script>
+const logoutButton = document.getElementById("log-out")
+
+logoutButton.addEventListener("click", function () {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+
+    window.location.href = "Login.html"
+})
+
+
+
+const signupForm = document.getElementById("signupForm");
+const profile = document.getElementById("profile");
+
+const savedUsername = localStorage.getItem("username");
+const savedPassword = localStorage.getItem("password")
+
+
+if (savedUsername) {
+
+    signupForm.style.display = "none";
+
+    profile.style.display = "block";
+
+    document.getElementById("profileUsername").textContent = savedUsername;
+    document.getElementById("profilepassword").textContent = savedPassword
+
+} else {
+
+    signupForm.style.display = "block";
+
+    profile.style.display = "none";
+
+}
+
+
+signupForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+
+    location.reload();
+
+});
+        // const themeButton = document.querySelector('.theme-button');
+        // const html = document.documentElement;
+
+        // const savedTheme = localStorage.getItem('theme');
+
+        // if (savedTheme === 'dark') {
+        //     html.setAttribute('data-theme', 'dark');
+        // }
+
+        // themeButton.addEventListener('click', () => {
+        //     const isDark = html.getAttribute('data-theme') === 'dark';
+
+        //     if (isDark) {
+        //         html.removeAttribute('data-theme');
+        //         localStorage.setItem('theme', 'light');
+        //     } else {
+        //         html.setAttribute('data-theme', 'dark');
+        //         localStorage.setItem('theme', 'dark');
+        //     }
+        // });
+</script>
+    <script src="home.js"></script>
+</body>
+</html>

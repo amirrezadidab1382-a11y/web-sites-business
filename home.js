@@ -51,6 +51,19 @@ handleHeaderScroll();
 /* =========================================
    MOBILE MENU
 ========================================= */
+// if (mobileMenuButton && mobileNav) {
+
+//     mobileMenuButton.addEventListener("click", () => {
+
+//         console.log("HAMBERGER CLICKED");
+
+//         const isOpen = mobileNav.classList.toggle("open");
+
+//         console.log(isOpen);
+
+//         mobileMenuButton.setAttribute("aria-expanded", isOpen);
+//     });
+// }
 
 if (mobileMenuButton && mobileNav) {
     mobileMenuButton.addEventListener("click", () => {
